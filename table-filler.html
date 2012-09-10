@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>-{foogaro.com}- jQuery plug-in | Table-filler</title>
+        <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+        <script type="text/javascript" src="js/table-filler.js"></script>
+
+        <script>
+
+
+            $(document).ready(function(){
+
+                $("#btnRemote").click(function () {
+                    $('.tableFiller').tableFiller({dataUrl: 'your/service/json'});
+                });
+
+                $("#btnLocal").click(function () {
+                    var objJSON = {"data":{"headers":["Numbers","Vocals","Letters"],"rows":[{"columns":[1,"A","B"]},{"columns":[2,"E","C"]},{"columns":[3,"I","D"]},{"columns":[4,"O","F"]},{"columns":[5,"U","G"]}]}};
+                    $('.tableFiller').tableFiller({data: objJSON});
+                });
+
+            });
+
+
+        </script>
+    </head>
+    <body>
+
+        <input type="button" value="Local DATA" id="btnLocal" />
+        <input type="button" value="Remote DATA" id="btnRemote" />
+
+        <table class="tableFiller" width="80%" border="1" bordercolor="#909090">
+        </table>
+
+    </body>
+</html>
