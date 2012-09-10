@@ -1,3 +1,12 @@
+/**
+ * This is an example on how to create a jQuery plug-in (minimum jQuery version is 1.4.2).
+ *
+ * By the way, I'm going to use this example to build a table filler which loads JSON data from a remote and local resource and puts the data into the table as they are retrieved.
+ *
+ * Soon I'll start a new jQuery plug-in project based upon this one to handle pagination!
+ *
+ */
+
 (function($) {
 
     var settings = {
